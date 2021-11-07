@@ -12,7 +12,8 @@
     letter-spacing: -0.5px;
   }
 
-  .info {
+.info {
+  div {
     margin-top: 1.5rem;
 
     color: var(--gray-400);
@@ -26,7 +27,13 @@
       align-items: center;
       gap: 0.5rem;
     }
+
+    & + div {
+      margin-top: 1rem;
+      font-style: italic;
+    }
   }
+}
 
   article {
     margin-top: 4rem;
@@ -54,6 +61,48 @@
       & + .postContent {
         margin-top: 3.15rem;
       }
+    }
+  }
+}
+
+.postNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 5rem;
+
+  div {
+    flex: 1;
+
+    a {
+      font-size: 1.125rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &.prevPost {
+      align-self: flex-start;
+
+      a {
+        align-items: flex-start;
+      }
+    }
+
+    &.nextPost {
+      align-self: flex-end;
+
+      a {
+        align-items: flex-end;
+      }
+    }
+
+    span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--pink-500);
     }
   }
 }
